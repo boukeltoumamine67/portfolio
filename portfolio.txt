@@ -1,0 +1,189 @@
+1. Basic Information
+What is your full name? Boukeltoum Amine
+What title do you want to use? 
+Flutter Developer mobile app developer? this title
+Mobile App Developer?
+Flutter & Dart Developer?
+What city/country are you from? And Defla Khemis Miliana
+What is your professional email? a-boukeltoum@univ-dbkm.dz and boukeltoumamien67@gmail.com
+Do you have:
+GitHub?  
+LinkedIn?
+Portfolio domain?
+CV/Resume PDF? yes is in my local machine
+2. About You
+How would you describe yourself in 2–4 lines?
+Why did you choose Flutter? i use flutter because it's a cross platform used to create android/IOS/desktop apps and can create  a resposive & apdative UI with good performance
+What do you enjoy most in mobile development?
+What type of apps do you like building?
+commercial apps
+
+What are your strengths as a developer?
+i can create my own SAAS, and i can work as a freelancer or in companies
+
+What are you currently learning?
+i learning native programming with kotlin jetPac compose 
+3. Technical Skills
+Flutter Skills
+Which Flutter concepts do you know?
+i have clean architecture
+i have also Bloc/Cubit
+dio
+responsive UI
+Which state management solutions have you used?
+
+Bloc/Cubit?
+
+
+Do you know:
+Responsive design?yes 
+Custom widgets?yes
+Animations?yes
+Navigation?yes
+Themes?yes
+Localization?yes
+Architectureyes
+Do you use Clean Architecture?yes
+Do you know:
+Repository Pattern?yes
+Use Cases?yes
+Dependency Injection?yes
+SOLID principles?
+Backend / APIs yes
+Have you worked with REST APIs? yes
+Do you know:
+Dio? yes
+http package?
+JSON serialization? yes
+Authentication? yes
+Firebase? yes
+Local Storage
+SharedPreferences?yes
+Hive? yes
+SQLite?
+Secure Storage?
+Tools
+Git?yes
+GitHub?yes
+Linux? yes
+Android Studio? yes
+VS Code? yes
+Postman? yes
+Figma? yes
+4. Programming Languages
+Which languages do you know?
+Dart? yes
+C? yes
+Java?
+Kotlin?
+JavaScript?
+What is your level in each one?
+5. Projects Section
+
+For EACH project answer:
+
+Basic Project Info
+Project name?DEM AI
+What type of app is it? healthcare app
+Is it personal, freelance, university, or client project? for university
+Description
+its a health care app created jor patinets that can access to the application via NIN and password and see all their medical history and prescriptions with medidcations ,then can see nearest pharmacy in map with routing and also can book appointment and cancel and see it status or cancel it
+
+What problem does it solve?
+paper usage for prescriptions and optimise time take it by patient to book appointments
+What does the app do?
+Technologies flutter 
+Which technologies/packages did you use?
+flutter_maps
+
+Features
+What are the main features?
+Authentication?
+API integration?
+Dark mode?
+Notifications?
+Payments?
+Maps?
+Architecture
+Did you use Clean Architecture?
+Which state management?
+Media
+Do you have:
+Screenshots?
+Demo video?
+GitHub repo?
+APK?
+Play Store link?
+Challenges
+What was the hardest part?
+What did you learn?
+6. Experience
+Have you worked professionally?
+Freelance?
+Internship?
+Team projects?
+Open source contributions?
+
+For each experience:
+
+Company/client name?
+Role?
+Duration?
+Responsibilities?
+Technologies used?
+7. Education
+What are you studying/studied?
+University/school name?
+Degree?
+Graduation year?
+Final year project topic?
+8. Certifications & Courses
+Any Flutter courses?
+Google certificates?
+Udemy/Coursera courses?
+Hackathons or competitions?
+9. Achievements
+Built X number of apps?
+Published apps?
+GitHub contributions?
+Awards?
+High GPA?
+Community involvement?
+10. Design & UI
+Do you design UIs yourself?
+Can you convert Figma to Flutter?
+Do you focus on:
+Responsive design?
+Smooth UX?
+Pixel-perfect UI?
+11. Future Goals
+What technologies are you learning next?
+What kind of developer do you want to become?
+What type of company/job are you targeting?
+12. Contact Information
+Email?
+GitHub?
+LinkedIn?
+WhatsApp (optional)?
+Telegram (optional)?
+13. Portfolio Style Questions
+Do you want:
+Minimal style?
+Modern animations?
+Dark theme?
+Light theme?
+Which color do you prefer?
+Do you want:
+Timeline section?
+Skills progress bars?
+Project filtering?
+Download CV button?
+Blog section?
+14. Optional Advanced Sections
+Testimonials?
+Services section?
+Tech stack icons?
+GitHub stats?
+Coding activity?
+Languages spoken?
+Availability for freelance/work?

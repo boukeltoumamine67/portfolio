@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boukeltoum Amine — Flutter & Mobile App Developer</title>
+  <meta name="description" content="Portfolio of Boukeltoum Amine — Flutter Developer specializing in cross-platform mobile apps, clean architecture, and responsive UI. Based in Ain Defla, Algeria.">
+  <meta name="keywords" content="Flutter Developer, Mobile App Developer, Dart, Clean Architecture, Cross-Platform, Boukeltoum Amine">
+  <meta name="author" content="Boukeltoum Amine">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Boukeltoum Amine — Flutter & Mobile App Developer">
+  <meta property="og:description" content="Flutter Developer specializing in cross-platform mobile apps, clean architecture, and responsive UI.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cursor Glow -->
+  <div class="cursor-glow"></div>
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader-spinner"></div>
+    <p class="preloader-text">Loading</p>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-logo">B<span>.</span>Amine</a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#hero" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="nav-menu-btn" id="navMenuBtn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ======== HERO SECTION ======== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          Available for Freelance & Work
+        </div>
+
+        <p class="hero-greeting">// Hello World, I'm</p>
+        <h1 class="hero-name">Boukeltoum <span class="highlight">Amine</span></h1>
+        <h2 class="hero-title"><span id="typingText">Flutter Developer</span><span style="color:var(--accent);animation:blink 1s step-end infinite;">|</span></h2>
+
+        <p class="hero-description">
+          I craft beautiful, high-performance cross-platform mobile applications using Flutter & Dart.
+          Passionate about clean architecture, responsive UI, and building commercial-grade SaaS products.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-rocket"></i> View My Work
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-paper-plane"></i> Get In Touch
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://github.com/boukeltoumamine67" target="_blank" rel="noopener noreferrer" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/amine-boukeltoum-8515b92a3/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://wa.me/213773302014" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="mailto:boukeltoumamien67@gmail.com" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <div class="hero-image-ring"></div>
+          <div class="hero-image-ring-2"></div>
+          <div class="hero-image-placeholder">BA</div>
+          <!-- Replace with your photo: <img src="your-photo.jpg" alt="Boukeltoum Amine" class="hero-image"> -->
+
+          <div class="hero-tech-badge"><i class="fab fa-flutter"></i> Flutter</div>
+          <div class="hero-tech-badge"><i class="fas fa-fire"></i> Firebase</div>
+          <div class="hero-tech-badge"><i class="fas fa-cubes"></i> Bloc/Cubit</div>
+          <div class="hero-tech-badge"><i class="fas fa-layer-group"></i> Clean Arch</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="mouse"></div>
+      <span>Scroll Down</span>
+    </div>
+
+    <style>
+      @keyframes blink {
+        50% { opacity: 0; }
+      }
+    </style>
+  </section>
+
+  <!-- ======== STATS SECTION ======== -->
+  <div class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-value" data-count="3" data-suffix="+">0</div>
+          <div class="stat-label">Projects Built</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="stat-value" data-count="2" data-suffix="+">0</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-value" data-count="10" data-suffix="+">0</div>
+          <div class="stat-label">Technologies</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-value" data-count="100" data-suffix="%">0</div>
+          <div class="stat-label">Dedication</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== ABOUT SECTION ======== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">About Me</p>
+        <h2 class="section-title">Get to Know Me</h2>
+        <p class="section-subtitle">A passionate mobile developer crafting digital experiences</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image-container reveal">
+          <div class="about-image-card">
+            <div class="about-image-placeholder">
+              <i class="fas fa-code"></i>
+            </div>
+            <!-- Replace: <img src="your-about-photo.jpg" alt="Boukeltoum Amine"> -->
+          </div>
+          <div class="about-floating-card">
+            <div class="stat-number">2+</div>
+            <div class="stat-label">Years of Building Apps</div>
+          </div>
+        </div>
+
+        <div class="about-content reveal reveal-delay-1">
+          <h3>Flutter Developer from <span style="color:var(--accent)">Algeria 🇩🇿</span></h3>
+          <p class="about-text">
+            I'm Boukeltoum Amine, a Flutter developer based in Ain Defla, Khemis Miliana, Algeria.
+            I chose Flutter because of its powerful cross-platform capabilities — allowing me to create stunning
+            Android, iOS, and desktop applications with responsive & adaptive UI and excellent performance from a single codebase.
+          </p>
+          <p class="about-text">
+            I specialize in building commercial-grade mobile applications with clean architecture principles.
+            I'm capable of creating my own SaaS products, and I thrive both as a freelancer and as part of a development team.
+            Currently, I'm expanding my skills by learning native Android development with Kotlin and Jetpack Compose.
+          </p>
+          <p class="about-text">
+            What drives me is the ability to transform ideas into polished, user-friendly applications that solve real-world problems.
+          </p>
+
+          <div class="about-highlights">
+            <div class="about-highlight-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Ain Defla, Algeria</span>
+            </div>
+            <div class="about-highlight-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>CS Bachelor's 2026</span>
+            </div>
+            <div class="about-highlight-item">
+              <i class="fas fa-laptop-code"></i>
+              <span>Freelance Ready</span>
+            </div>
+            <div class="about-highlight-item">
+              <i class="fas fa-language"></i>
+              <span>English Speaker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SKILLS SECTION ======== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">My Skills</p>
+        <h2 class="section-title">Technical Expertise</h2>
+        <p class="section-subtitle">A well-rounded toolkit for building modern mobile applications</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Flutter & Dart -->
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-card-icon"><i class="fab fa-flutter"></i></div>
+            <h3 class="skill-card-title">Flutter & Dart</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-item-name">Flutter Framework</span>
+                <span class="skill-item-level">90%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-item-name">Dart Language</span>
+                <span class="skill-item-level">88%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-item-name">Bloc / Cubit</span>
+                <span class="skill-item-level">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-item-name">Responsive & Adaptive UI</span>
+                <span class="skill-item-level">87%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="87"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Architecture & Patterns -->
+        <div class="skill-card reveal reveal-delay-1">
+          <div class="skill-card-header">
+            <div class="skill-card-icon"><i class="fas fa-layer-group"></i></div>
+            <h3 class="skill-card-title">Architecture & Patterns</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-item-name">Clean Architecture</span>
+                <span class="skill-item-level">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-item-name">Repository Pattern</span>
+                <span class="skill-item-level">82%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-item-name">Dependency Injection</span>
+                <span class="skill-item-level">80%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-item-name">Use Cases</span>
+                <span class="skill-item-level">78%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend & APIs -->
+        <div class="skill-card reveal reveal-delay-2">
+          <div class="skill-card-header">
+            <div class="skill-card-icon"><i class="fas fa-server"></i></div>
+            <h3 class="skill-card-title">Backend & APIs</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-item-name">REST API Integration</span>
+                <span class="skill-item-level">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-item-name">Dio HTTP Client</span>
+                <span class="skill-item-level">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-item-name">Firebase</span>
+                <span class="skill-item-level">80%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-item-name">Authentication & JSON</span>
+                <span class="skill-item-level">82%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & Languages -->
+        <div class="skill-card reveal reveal-delay-3">
+          <div class="skill-card-header">
+            <div class="skill-card-icon"><i class="fas fa-tools"></i></div>
+            <h3 class="skill-card-title">Tools & Languages</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-item-name">Git & GitHub</span>
+                <span class="skill-item-level">82%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-item-name">C and C++ Languages</span>
+                <span class="skill-item-level">75%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-item-name">Kotlin (Learning)</span>
+                <span class="skill-item-level">40%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="40"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-item-name">Figma to Flutter</span>
+                <span class="skill-item-level">78%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Stack Tags -->
+      <div class="tech-stack-section reveal">
+        <div class="tech-tags" style="margin-top:48px;">
+          <span class="tech-tag"><i class="fab fa-flutter"></i> Flutter</span>
+          <span class="tech-tag"><i class="fas fa-code"></i> Dart</span>
+          <span class="tech-tag"><i class="fas fa-fire"></i> Firebase</span>
+          <span class="tech-tag"><i class="fas fa-cubes"></i> Bloc / Cubit</span>
+          <span class="tech-tag"><i class="fas fa-network-wired"></i> Dio</span>
+          <span class="tech-tag"><i class="fas fa-layer-group"></i> Clean Architecture</span>
+          <span class="tech-tag"><i class="fas fa-database"></i> Hive</span>
+          <span class="tech-tag"><i class="fas fa-cog"></i> SharedPreferences</span>
+          <span class="tech-tag"><i class="fab fa-git-alt"></i> Git</span>
+          <span class="tech-tag"><i class="fab fa-github"></i> GitHub</span>
+          <span class="tech-tag"><i class="fab fa-linux"></i> Linux</span>
+          <span class="tech-tag"><i class="fab fa-android"></i> Android Studio</span>
+          <span class="tech-tag"><i class="fas fa-code"></i> VS Code</span>
+          <span class="tech-tag"><i class="fas fa-paper-plane"></i> Postman</span>
+          <span class="tech-tag"><i class="fab fa-figma"></i> Figma</span>
+          <span class="tech-tag"><i class="fas fa-map-marked-alt"></i> Maps</span>
+          <span class="tech-tag"><i class="fas fa-globe"></i> Localization</span>
+          <span class="tech-tag"><i class="fas fa-paint-brush"></i> Custom Widgets</span>
+          <span class="tech-tag"><i class="fas fa-film"></i> Animations</span>
+          <span class="tech-tag"><i class="fas fa-moon"></i> Theming</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== PROJECTS SECTION ======== -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">My Work</p>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Real-world applications built with passion and precision</p>
+      </div>
+
+      <div class="project-showcase">
+        <!-- DEM AI Project -->
+        <div class="project-card reveal">
+          <div class="project-preview">
+            <div class="device-mockups">
+              <div class="device-phone screen-left">
+                <img src="maps.jpg" alt="DEM AI - Nearest Pharmacy Map">
+              </div>
+              <div class="device-phone screen-right">
+                <img src="appointments.jpg" alt="DEM AI - Appointments View">
+              </div>
+            </div>
+            <div class="project-type-badge">University Project</div>
+          </div>
+
+          <div class="project-info">
+            <h3 class="project-title">DEM AI</h3>
+            <p class="project-subtitle">Healthcare Mobile Application</p>
+            <p class="project-description">
+              A comprehensive healthcare app designed for patients to access their complete medical history digitally.
+              Patients authenticate via NIN and password to view prescriptions, medications, locate nearby pharmacies
+              on an interactive map with routing, and manage appointments — all in one place.
+            </p>
+
+            <div class="project-features">
+              <span class="project-feature"><i class="fas fa-check-circle"></i> Patient Authentication (NIN)</span>
+              <span class="project-feature"><i class="fas fa-check-circle"></i> Medical History & Prescriptions</span>
+              <span class="project-feature"><i class="fas fa-check-circle"></i> Pharmacy Map + Routing</span>
+              <span class="project-feature"><i class="fas fa-check-circle"></i> Appointment Booking</span>
+              <span class="project-feature"><i class="fas fa-check-circle"></i> Dark / Light Mode</span>
+              <span class="project-feature"><i class="fas fa-check-circle"></i> REST API Integration</span>
+              <span class="project-feature"><i class="fas fa-check-circle"></i> Clean Architecture</span>
+              <span class="project-feature"><i class="fas fa-check-circle"></i> Bloc / Cubit State Mgmt</span>
+            </div>
+
+            <div class="project-tech-stack">
+              <span class="project-tech">Flutter</span>
+              <span class="project-tech">Dart</span>
+              <span class="project-tech">Dio</span>
+              <span class="project-tech">Bloc/Cubit</span>
+              <span class="project-tech">Flutter Maps</span>
+              <span class="project-tech">Geolocation</span>
+              <span class="project-tech">Localization</span>
+              <span class="project-tech">Splash Screen</span>
+            </div>
+
+            <div class="project-links">
+              <a href="#" class="btn btn-primary" style="padding:10px 24px;font-size:0.85rem;">
+                <i class="fas fa-play-circle"></i> View Demo
+              </a>
+              <a href="#" class="btn btn-outline" style="padding:10px 24px;font-size:0.85rem;">
+                <i class="fas fa-images"></i> Screenshots
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== EXPERIENCE SECTION ======== -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Experience</p>
+        <h2 class="section-title">My Journey</h2>
+        <p class="section-subtitle">Highlights from my development career so far</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2025 – Present</span>
+            <h4 class="timeline-title">Mobile Developer</h4>
+            <p class="timeline-subtitle">Team Projects & Open Source</p>
+            <p class="timeline-text">
+              Collaborating on team projects and contributing to open source.
+              Building mobile applications using Flutter with clean architecture, Bloc/Cubit
+              state management, and REST API integration.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item reveal reveal-delay-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2025</span>
+            <h4 class="timeline-title">Hackathon Participant</h4>
+            <p class="timeline-subtitle">Master coding — Laghouat</p>
+            <p class="timeline-text">
+              Competed in the Master coding hackathon in Laghouat, Algeria.
+              Demonstrated problem-solving abilities and rapid development skills
+              under competitive pressure.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="timeline-item reveal reveal-delay-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2025 – 2026</span>
+            <h4 class="timeline-title">DEM AI — Final Year Project</h4>
+            <p class="timeline-subtitle">Djillali Bounaama University</p>
+            <p class="timeline-text">
+              Designed and developed a comprehensive healthcare mobile application
+              as final year project. Implemented patient authentication, medical records,
+              pharmacy locator with maps, and appointment management system.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 4 -->
+        <div class="timeline-item reveal reveal-delay-3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Currently Learning</span>
+            <h4 class="timeline-title">Kotlin & Jetpack Compose</h4>
+            <p class="timeline-subtitle">Native Android Development</p>
+            <p class="timeline-text">
+              Expanding skill set by learning native Android development with Kotlin
+              and Jetpack Compose to complement Flutter expertise and broaden career opportunities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== EDUCATION SECTION ======== -->
+  <section class="section education" id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Education</p>
+        <h2 class="section-title">Academic Background</h2>
+        <p class="section-subtitle">Building a strong foundation in computer science</p>
+      </div>
+
+      <div class="education-card reveal">
+        <div class="education-icon">
+          <i class="fas fa-university"></i>
+        </div>
+        <h3 class="education-degree">Bachelor's Degree</h3>
+        <p class="education-field">Computer Science — Information Systems</p>
+        <p class="education-university">Djillali Bounaama University — Khemis Miliana</p>
+        <p class="education-year">Expected Graduation: 2026</p>
+        <div class="education-project">
+          <i class="fas fa-project-diagram"></i>
+          Final Year Project: DEM AI — Healthcare App
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div style="margin-top:48px;">
+        <h3 style="text-align:center;font-family:var(--font-heading);font-weight:700;font-size:1.4rem;margin-bottom:32px;" class="reveal">Certifications & Activities</h3>
+        <div class="cert-grid">
+          <div class="cert-card reveal">
+            <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+            <div class="cert-info">
+              <h4>Clean Architecture Course</h4>
+              <p>Flutter clean architecture principles, patterns, and best practices</p>
+            </div>
+          </div>
+          <div class="cert-card reveal reveal-delay-1">
+            <div class="cert-icon"><i class="fas fa-trophy"></i></div>
+            <div class="cert-info">
+              <h4>Master Codein Hackathon</h4>
+              <p>Competitive programming event — Laghouat, Algeria</p>
+            </div>
+          </div>
+          <div class="cert-card reveal reveal-delay-2">
+            <div class="cert-icon"><i class="fab fa-github"></i></div>
+            <div class="cert-info">
+              <h4>Open Source Contributor</h4>
+              <p>Active contributor to open source projects on GitHub</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SERVICES SECTION ======== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Services</p>
+        <h2 class="section-title">What I Offer</h2>
+        <p class="section-subtitle">Professional mobile development services tailored to your needs</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-card-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3 class="service-card-title">Mobile App Development</h3>
+          <p class="service-card-text">
+            Custom cross-platform mobile applications for Android and iOS
+            using Flutter, with responsive design and smooth performance.
+          </p>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-card-icon"><i class="fas fa-paint-brush"></i></div>
+          <h3 class="service-card-title">UI/UX Implementation</h3>
+          <p class="service-card-text">
+            Pixel-perfect conversion of Figma designs to Flutter code.
+            Custom widgets, animations, theming, and responsive layouts.
+          </p>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-card-icon"><i class="fas fa-plug"></i></div>
+          <h3 class="service-card-title">API Integration</h3>
+          <p class="service-card-text">
+            Seamless REST API integration with Dio, authentication flows,
+            Firebase services, and local storage solutions.
+          </p>
+        </div>
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-card-icon"><i class="fas fa-rocket"></i></div>
+          <h3 class="service-card-title">SaaS Development</h3>
+          <p class="service-card-text">
+            End-to-end SaaS product development — from architecture design
+            to deployment. Building scalable, maintainable commercial apps.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CONTACT SECTION ======== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-subtitle">Have a project in mind? Let's make it happen!</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Get In Touch</h3>
+          <p>
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            Whether it's freelance work or a full-time position, feel free to reach out!
+          </p>
+
+          <div class="contact-links">
+            <a href="mailto:boukeltoumamien67@gmail.com" class="contact-link-item">
+              <div class="contact-link-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">Email</span>
+                <span class="contact-link-value">boukeltoumamien67@gmail.com</span>
+              </div>
+            </a>
+            <a href="mailto:a-boukeltoum@univ-dbkm.dz" class="contact-link-item">
+              <div class="contact-link-icon"><i class="fas fa-university"></i></div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">University Email</span>
+                <span class="contact-link-value">a-boukeltoum@univ-dbkm.dz</span>
+              </div>
+            </a>
+            <a href="https://wa.me/213773302014" target="_blank" class="contact-link-item">
+              <div class="contact-link-icon"><i class="fab fa-whatsapp"></i></div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">WhatsApp</span>
+                <span class="contact-link-value">+213 773 302 014</span>
+              </div>
+            </a>
+            <a href="https://github.com/boukeltoumamine67" target="_blank" class="contact-link-item">
+              <div class="contact-link-icon"><i class="fab fa-github"></i></div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-value">boukeltoumamine67</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/amine-boukeltoum-8515b92a3/" target="_blank" class="contact-link-item">
+              <div class="contact-link-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-value">Amine Boukeltoum</span>
+              </div>
+            </a>
+          </div>
+
+          <div style="margin-top:24px;">
+            <a href="#" id="downloadCV" class="btn btn-primary">
+              <i class="fas fa-download"></i> Download CV
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form reveal reveal-delay-1">
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Discussion">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="#hero" class="footer-logo">B<span>.</span>Amine</a>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com/boukeltoumamine67" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/amine-boukeltoum-8515b92a3/" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://wa.me/213773302014" target="_blank" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Boukeltoum Amine. Crafted with <span class="heart">♥</span> using Flutter mindset.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" title="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
