@@ -77,7 +77,7 @@
           Available for Freelance & Work
         </div>
 
-        <p class="hero-greeting">// Hello World, I'm</p>
+        <p class="hero-greeting">Hello,I'm</p>
         <h1 class="hero-name">Boukeltoum <span class="highlight">Amine</span></h1>
         <h2 class="hero-title"><span id="typingText">Flutter Developer</span><span style="color:var(--accent);animation:blink 1s step-end infinite;">|</span></h2>
 
@@ -115,8 +115,7 @@
         <div class="hero-image-wrapper">
           <div class="hero-image-ring"></div>
           <div class="hero-image-ring-2"></div>
-          <div class="hero-image-placeholder">BA</div>
-          <!-- Replace with your photo: <img src="your-photo.jpg" alt="Boukeltoum Amine" class="hero-image"> -->
+          <img src="profile.jpg" alt="Boukeltoum Amine" class="hero-image">
 
           <div class="hero-tech-badge"><i class="fab fa-flutter"></i> Flutter</div>
           <div class="hero-tech-badge"><i class="fas fa-fire"></i> Firebase</div>
@@ -174,10 +173,7 @@
       <div class="about-grid">
         <div class="about-image-container reveal">
           <div class="about-image-card">
-            <div class="about-image-placeholder">
-              <i class="fas fa-code"></i>
-            </div>
-            <!-- Replace: <img src="your-about-photo.jpg" alt="Boukeltoum Amine"> -->
+            <img src="profile.jpg" alt="Boukeltoum Amine">
           </div>
           <div class="about-floating-card">
             <div class="stat-number">2+</div>
@@ -428,12 +424,28 @@
         <!-- DEM AI Project -->
         <div class="project-card reveal">
           <div class="project-preview">
+            <!-- Project Interactive Tabs -->
+            <div class="project-tabs">
+              <button class="project-tab-btn active" data-tab="ai" title="AI Prescription Analysis">
+                <i class="fas fa-robot"></i> AI Assistant
+              </button>
+              <button class="project-tab-btn" data-tab="pharmacy" title="Interactive Pharmacy Map">
+                <i class="fas fa-map-marked-alt"></i> Map
+              </button>
+              <button class="project-tab-btn" data-tab="appointments" title="Appointment Management">
+                <i class="fas fa-calendar-alt"></i> Appointments
+              </button>
+              <button class="project-tab-btn" data-tab="auth" title="NIN Login Screen">
+                <i class="fas fa-user-shield"></i> Auth
+              </button>
+            </div>
+
             <div class="device-mockups">
               <div class="device-phone screen-left">
-                <img src="maps.jpg" alt="DEM AI - Nearest Pharmacy Map">
+                <img id="mockup-left" src="medical_history.jpg" alt="DEM AI View Left">
               </div>
               <div class="device-phone screen-right">
-                <img src="appointments.jpg" alt="DEM AI - Appointments View">
+                <img id="mockup-right" src="ai_analysis.jpg" alt="DEM AI View Right">
               </div>
             </div>
             <div class="project-type-badge">University Project</div>
@@ -441,33 +453,33 @@
 
           <div class="project-info">
             <h3 class="project-title">DEM AI</h3>
-            <p class="project-subtitle">Healthcare Mobile Application</p>
+            <p class="project-subtitle">Healthcare App with Gemini AI Integration</p>
             <p class="project-description">
-              A comprehensive healthcare app designed for patients to access their complete medical history digitally.
-              Patients authenticate via NIN and password to view prescriptions, medications, locate nearby pharmacies
-              on an interactive map with routing, and manage appointments — all in one place.
+              A modern digital healthcare application that replaces paper prescriptions and streamlines patient care.
+              It features an integrated <strong>Gemini AI Assistant</strong> that reads and analyzes the patient's medication list in real-time,
+              identifying critical errors, incorrect dosages, and dangerous drug combinations (such as fatal overdoses)
+              to ensure patient safety and security.
             </p>
 
             <div class="project-features">
-              <span class="project-feature"><i class="fas fa-check-circle"></i> Patient Authentication (NIN)</span>
-              <span class="project-feature"><i class="fas fa-check-circle"></i> Medical History & Prescriptions</span>
-              <span class="project-feature"><i class="fas fa-check-circle"></i> Pharmacy Map + Routing</span>
-              <span class="project-feature"><i class="fas fa-check-circle"></i> Appointment Booking</span>
-              <span class="project-feature"><i class="fas fa-check-circle"></i> Dark / Light Mode</span>
-              <span class="project-feature"><i class="fas fa-check-circle"></i> REST API Integration</span>
-              <span class="project-feature"><i class="fas fa-check-circle"></i> Clean Architecture</span>
-              <span class="project-feature"><i class="fas fa-check-circle"></i> Bloc / Cubit State Mgmt</span>
+              <span class="project-feature"><i class="fas fa-check-circle"></i> Gemini AI Medication Analysis</span>
+              <span class="project-feature"><i class="fas fa-check-circle"></i> NIN & Password Secure Authentication</span>
+              <span class="project-feature"><i class="fas fa-check-circle"></i> Medical History Timeline & Prescriptions</span>
+              <span class="project-feature"><i class="fas fa-check-circle"></i> Pharmacy Locator Map with Routing</span>
+              <span class="project-feature"><i class="fas fa-check-circle"></i> Interactive Booking & Canceling Flow</span>
+              <span class="project-feature"><i class="fas fa-check-circle"></i> Dark & Light Themes Built-in</span>
+              <span class="project-feature"><i class="fas fa-check-circle"></i> Clean Architecture (Repository/Use Cases)</span>
+              <span class="project-feature"><i class="fas fa-check-circle"></i> State Management using Bloc / Cubit</span>
             </div>
 
             <div class="project-tech-stack">
               <span class="project-tech">Flutter</span>
               <span class="project-tech">Dart</span>
-              <span class="project-tech">Dio</span>
+              <span class="project-tech">Gemini API</span>
               <span class="project-tech">Bloc/Cubit</span>
+              <span class="project-tech">Dio HTTP</span>
               <span class="project-tech">Flutter Maps</span>
               <span class="project-tech">Geolocation</span>
-              <span class="project-tech">Localization</span>
-              <span class="project-tech">Splash Screen</span>
             </div>
 
             <div class="project-links">

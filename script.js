@@ -303,6 +303,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ---- Project Tab Switcher ----
+  const projectTabs = document.querySelectorAll('.project-tab-btn');
+  const mockupLeft = document.getElementById('mockup-left');
+  const mockupRight = document.getElementById('mockup-right');
+
+  const tabImages = {
+    ai: {
+      left: 'medical_history.jpg',
+      right: 'ai_analysis.jpg'
+    },
+    pharmacy: {
+      left: 'maps.jpg',
+      right: 'medical_history.jpg'
+    },
+    appointments: {
+      left: 'add_appointment.jpg',
+      right: 'appointments.jpg'
+    },
+    auth: {
+      left: 'login.jpg',
+      right: 'medical_history.jpg'
+    }
+  };
+
+  projectTabs.forEach(tab => {
+    tab.addEventListener('click', (e) => {
+      e.stopPropagation(); // prevent card click or tilt events
+      
+      // Remove active class from all tabs
+      projectTabs.forEach(t => t.classList.remove('active'));
+      // Add active to clicked tab
+      tab.classList.add('active');
+
+      const tabId = tab.getAttribute('data-tab');
+      const images = tabImages[tabId];
+
+      if (images && mockupLeft && mockupRight) {
+        mockupLeft.style.opacity = '0';
+        mockupRight.style.opacity = '0';
+
+        setTimeout(() => {
+          mockupLeft.src = images.left;
+          mockupRight.src = images.right;
+          mockupLeft.style.opacity = '1';
+          mockupRight.style.opacity = '1';
+        }, 200);
+      }
+    });
+  });
+
   // ---- Download CV Button ----
   const downloadCvBtn = document.getElementById('downloadCV');
   if (downloadCvBtn) {
