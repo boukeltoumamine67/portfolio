@@ -284,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ---- Tilt Effect on Project Cards ----
-  const tiltCards = document.querySelectorAll('.project-card, .service-card');
+  const tiltCards = document.querySelectorAll('.service-card');
   if (window.innerWidth > 768) {
     tiltCards.forEach(card => {
       card.addEventListener('mousemove', (e) => {
@@ -352,6 +352,17 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  const screenshotsLink = document.querySelector('.screenshots-link');
+  const projectScreenshots = document.getElementById('projectScreenshots');
+  if (screenshotsLink && projectScreenshots) {
+    screenshotsLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      const top = projectScreenshots.getBoundingClientRect().top + window.scrollY - 110;
+      window.history.pushState(null, '', '#projectScreenshots');
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  }
 
   // ---- Download CV Button ----
   const downloadCvBtn = document.getElementById('downloadCV');
