@@ -281,79 +281,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ---- Project Tab Switcher ----
-  const projectTabs = document.querySelectorAll('.project-tab-btn');
-
-  const tabImages = {
-    ai: {
-      left: 'medical_history.jpg',
-      right: 'ai_analysis.jpg'
-    },
-    pharmacy: {
-      left: 'maps.jpg',
-      right: 'medical_history.jpg'
-    },
-    appointments: {
-      left: 'add_appointment.jpg',
-      right: 'appointments.jpg'
-    },
-    auth: {
-      left: 'login.jpg',
-      right: 'medical_history.jpg'
-    },
-    souq_home: {
-      left: 'souq_pro_7.jpg',
-      right: 'souq_pro_4.jpg'
-    },
-    souq_auth: {
-      left: 'souq_pro_3.jpg',
-      right: 'souq_pro_7.jpg'
-    },
-    souq_offer: {
-      left: 'souq_pro_2.jpg',
-      right: 'souq_pro_1.jpg'
-    },
-    souq_profile: {
-      left: 'souq_pro_5.jpg',
-      right: 'souq_pro_6.jpg'
-    },
-    souq_payments: {
-      left: 'souq_pro_8.jpg',
-      right: 'souq_pro_6.jpg'
-    }
-  };
-
-  projectTabs.forEach(tab => {
-    tab.addEventListener('click', (e) => {
-      e.stopPropagation(); // prevent card click or tilt events
-      
-      const previewContainer = tab.closest('.project-preview');
-      const tabsInContainer = previewContainer.querySelectorAll('.project-tab-btn');
-      
-      // Remove active class from all tabs in this project
-      tabsInContainer.forEach(t => t.classList.remove('active'));
-      // Add active to clicked tab
-      tab.classList.add('active');
-
-      const tabId = tab.getAttribute('data-tab');
-      const images = tabImages[tabId];
-      const mockupLeft = previewContainer.querySelector('.screen-left img');
-      const mockupRight = previewContainer.querySelector('.screen-right img');
-
-      if (images && mockupLeft && mockupRight) {
-        mockupLeft.style.opacity = '0';
-        mockupRight.style.opacity = '0';
-
-        setTimeout(() => {
-          mockupLeft.src = images.left;
-          mockupRight.src = images.right;
-          mockupLeft.style.opacity = '1';
-          mockupRight.style.opacity = '1';
-        }, 200);
-      }
-    });
-  });
-
   const screenshotsLinks = document.querySelectorAll('.screenshots-link');
   if (screenshotsLinks.length > 0) {
     screenshotsLinks.forEach(link => {
@@ -459,6 +386,20 @@ document.addEventListener('DOMContentLoaded', () => {
       projects_label: "Mes Travaux",
       projects_title: "Projets Phares",
       projects_subtitle: "Des applications concrètes construites avec passion et précision",
+      screenshots_swipe_hint: "Faites défiler pour découvrir les écrans",
+      walkthrough_sign_in: "Connexion",
+      walkthrough_medical_history: "Historique médical",
+      walkthrough_ai_analysis: "Analyse IA",
+      walkthrough_pharmacy_map: "Carte des pharmacies",
+      walkthrough_book_appointment: "Prendre rendez-vous",
+      walkthrough_appointments: "Rendez-vous",
+      walkthrough_home: "Accueil",
+      walkthrough_job_feed: "Offres",
+      walkthrough_demand_details: "Détails de la demande",
+      walkthrough_submit_offer: "Envoyer une offre",
+      walkthrough_profile: "Profil",
+      walkthrough_wallet: "Portefeuille",
+      walkthrough_payment_methods: "Moyens de paiement",
       demai_badge: "Projet Universitaire",
       demai_subtitle: "Application de Santé avec Intégration Gemini AI",
       demai_description: "Une application de santé numérique moderne qui remplace les ordonnances papier et simplifie les soins aux patients. Elle intègre un <strong>Assistant Gemini AI</strong> qui lit et analyse la liste de médicaments du patient en temps réel, identifiant les erreurs critiques, les dosages incorrects et les combinaisons médicamenteuses dangereuses pour assurer la sécurité du patient.",

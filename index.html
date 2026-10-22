@@ -50,11 +50,7 @@
       </div>
 
       <div style="display:flex;align-items:center;gap:8px;">
-<<<<<<< HEAD
         <a href="https://drive.google.com/file/d/1dSGQ4o7MV7TU4ML2aHGphB_OUUbG1gb_/view?usp=sharing" class="nav-resume-btn" target="_blank" rel="noopener noreferrer">
-=======
-        <a href="https://drive.google.com/file/d/15tXo8rcYtij3awW6u7ren8ZkQpHF3Hs4/view?usp=sharing" class="nav-resume-btn" target="_blank" rel="noopener noreferrer">
->>>>>>> 71c35006d67ed191c5dded02a5155438c3de71b6
           <span data-i18n="nav_resume">Resume</span>
         </a>
         <button class="lang-toggle" id="langToggle" title="Switch to French">
@@ -122,17 +118,10 @@
         <div class="hero-image-wrapper">
           <div class="hero-image-ring"></div>
           <div class="hero-image-ring-2"></div>
-<<<<<<< HEAD
-          <img src="profile.jpg" alt="Boukeltoum Amine" class="hero-image">
+          <img src="assets/profile/profile picture2.png" alt="Boukeltoum Amine" class="hero-image">
 
           <div class="hero-tech-badge"><i class="fab fa-flutter"></i> Flutter</div>
           <div class="hero-tech-badge"><i class="fas fa-fire"></i> Firebase</div>
-=======
-          <img src="profile2.png" alt="Boukeltoum Amine" class="hero-image">
-
-          <div class="hero-tech-badge"><i class="fab fa-flutter"></i> Flutter</div>
-          <div class="hero-tech-badge"><i class="fas fa-fire"></i> Firebase/Supabase</div>
->>>>>>> 71c35006d67ed191c5dded02a5155438c3de71b6
           <div class="hero-tech-badge"><i class="fas fa-cubes"></i> Bloc/Cubit</div>
           <div class="hero-tech-badge"><i class="fas fa-layer-group"></i> Clean Arch</div>
         </div>
@@ -187,10 +176,10 @@
       <div class="about-grid">
         <div class="about-image-container reveal">
           <div class="about-image-card">
-            <img src="profile.jpg" alt="Boukeltoum Amine">
+            <img src="assets/profile/profile.jpg" alt="Boukeltoum Amine">
           </div>
           <div class="about-floating-card">
-            <div class="stat-number">1+</div>
+            <div class="stat-number">2+</div>
             <div class="stat-label" data-i18n="about_years_building">Years of Building Apps</div>
           </div>
         </div>
@@ -438,29 +427,44 @@
         <!-- DEM AI Project -->
         <div class="project-card reveal">
           <div class="project-preview" id="projectScreenshots">
-            <!-- Project Interactive Tabs -->
-            <div class="project-tabs">
-              <button class="project-tab-btn active" data-tab="ai" title="AI Prescription Analysis">
-                <i class="fas fa-robot"></i> AI Assistant
-              </button>
-              <button class="project-tab-btn" data-tab="pharmacy" title="Interactive Pharmacy Map">
-                <i class="fas fa-map-marked-alt"></i> Map
-              </button>
-              <button class="project-tab-btn" data-tab="appointments" title="Appointment Management">
-                <i class="fas fa-calendar-alt"></i> Appointments
-              </button>
-              <button class="project-tab-btn" data-tab="auth" title="NIN Login Screen">
-                <i class="fas fa-user-shield"></i> Auth
-              </button>
-            </div>
-
-            <div class="device-mockups">
-              <div class="device-phone screen-left">
-                <img id="mockup-left" src="medical_history.jpg" alt="DEM AI View Left">
-              </div>
-              <div class="device-phone screen-right">
-                <img id="mockup-right" src="ai_analysis.jpg" alt="DEM AI View Right">
-              </div>
+            <p class="onboarding-hint"><i class="fas fa-arrows-left-right" aria-hidden="true"></i> <span data-i18n="screenshots_swipe_hint">Swipe or scroll to explore screens</span></p>
+            <div class="device-mockups" role="region" aria-label="DEM AI app screens" tabindex="0">
+              <figure class="onboarding-screen">
+                <div class="device-phone">
+                  <img src="assets/projects/dem-ai/login.jpg" alt="DEM AI patient login screen">
+                </div>
+                <figcaption><span class="onboarding-step">01</span><span data-i18n="walkthrough_sign_in">Sign in</span></figcaption>
+              </figure>
+              <figure class="onboarding-screen">
+                <div class="device-phone">
+                  <img src="assets/projects/dem-ai/medical_history.jpg" alt="DEM AI medical history and prescriptions">
+                </div>
+                <figcaption><span class="onboarding-step">02</span><span data-i18n="walkthrough_medical_history">Medical history</span></figcaption>
+              </figure>
+              <figure class="onboarding-screen">
+                <div class="device-phone">
+                  <img src="assets/projects/dem-ai/ai_analysis.jpg" alt="DEM AI medication analysis">
+                </div>
+                <figcaption><span class="onboarding-step">03</span><span data-i18n="walkthrough_ai_analysis">AI analysis</span></figcaption>
+              </figure>
+              <figure class="onboarding-screen">
+                <div class="device-phone">
+                  <img src="assets/projects/dem-ai/maps.jpg" alt="DEM AI nearby pharmacy map">
+                </div>
+                <figcaption><span class="onboarding-step">04</span><span data-i18n="walkthrough_pharmacy_map">Pharmacy map</span></figcaption>
+              </figure>
+              <figure class="onboarding-screen">
+                <div class="device-phone">
+                  <img src="assets/projects/dem-ai/add_appointment.jpg" alt="DEM AI appointment booking form">
+                </div>
+                <figcaption><span class="onboarding-step">05</span><span data-i18n="walkthrough_book_appointment">Book an appointment</span></figcaption>
+              </figure>
+              <figure class="onboarding-screen">
+                <div class="device-phone">
+                  <img src="assets/projects/dem-ai/appointments.jpg" alt="DEM AI appointment list and statuses">
+                </div>
+                <figcaption><span class="onboarding-step">06</span><span data-i18n="walkthrough_appointments">Appointments</span></figcaption>
+              </figure>
             </div>
             <div class="project-type-badge" data-i18n="demai_badge">University Project</div>
           </div>
@@ -510,32 +514,56 @@
         <!-- Souq Pro Project -->
         <div class="project-card reveal">
           <div class="project-preview" id="projectScreenshotsSouq">
-            <!-- Project Interactive Tabs -->
-            <div class="project-tabs" style="flex-wrap: wrap;">
-              <button class="project-tab-btn active" data-tab="souq_home" title="Home View">
-                <i class="fas fa-home"></i> Home
-              </button>
-              <button class="project-tab-btn" data-tab="souq_auth" title="Login">
-                <i class="fas fa-sign-in-alt"></i> Login
-              </button>
-              <button class="project-tab-btn" data-tab="souq_offer" title="Submit Offer">
-                <i class="fas fa-handshake"></i> Offer
-              </button>
-              <button class="project-tab-btn" data-tab="souq_profile" title="Profile View">
-                <i class="fas fa-user-circle"></i> Profile
-              </button>
-              <button class="project-tab-btn" data-tab="souq_payments" title="Payment Methods">
-                <i class="fas fa-credit-card"></i> Payments
-              </button>
-            </div>
-
-            <div class="device-mockups">
-              <div class="device-phone screen-left">
-                <img src="souq_pro_7.jpg" alt="Souq Pro View Left">
-              </div>
-              <div class="device-phone screen-right">
-                <img src="souq_pro_4.jpg" alt="Souq Pro View Right">
-              </div>
+            <p class="onboarding-hint"><i class="fas fa-arrows-left-right" aria-hidden="true"></i> <span data-i18n="screenshots_swipe_hint">Swipe or scroll to explore screens</span></p>
+            <div class="device-mockups" role="region" aria-label="Souq Pro app screens" tabindex="0">
+              <figure class="onboarding-screen">
+                <div class="device-phone">
+                  <img src="assets/projects/souq-pro/souq_pro_1.jpg" alt="Souq Pro sign-in screen">
+                </div>
+                <figcaption><span class="onboarding-step">01</span><span data-i18n="walkthrough_sign_in">Sign in</span></figcaption>
+              </figure>
+              <figure class="onboarding-screen">
+                <div class="device-phone">
+                  <img src="assets/projects/souq-pro/souq_pro_5.jpg" alt="Souq Pro home and service categories">
+                </div>
+                <figcaption><span class="onboarding-step">02</span><span data-i18n="walkthrough_home">Home</span></figcaption>
+              </figure>
+              <figure class="onboarding-screen">
+                <div class="device-phone">
+                  <img src="assets/projects/souq-pro/souq_pro_8.jpg" alt="Souq Pro available service demands">
+                </div>
+                <figcaption><span class="onboarding-step">03</span><span data-i18n="walkthrough_job_feed">Job feed</span></figcaption>
+              </figure>
+              <figure class="onboarding-screen">
+                <div class="device-phone">
+                  <img src="assets/projects/souq-pro/souq_pro_3.jpg" alt="Souq Pro service demand details">
+                </div>
+                <figcaption><span class="onboarding-step">04</span><span data-i18n="walkthrough_demand_details">Demand details</span></figcaption>
+              </figure>
+              <figure class="onboarding-screen">
+                <div class="device-phone">
+                  <img src="assets/projects/souq-pro/souq_pro_2.jpg" alt="Souq Pro submit an offer form">
+                </div>
+                <figcaption><span class="onboarding-step">05</span><span data-i18n="walkthrough_submit_offer">Submit an offer</span></figcaption>
+              </figure>
+              <figure class="onboarding-screen">
+                <div class="device-phone">
+                  <img src="assets/projects/souq-pro/souq_pro_4.jpg" alt="Souq Pro professional profile">
+                </div>
+                <figcaption><span class="onboarding-step">06</span><span data-i18n="walkthrough_profile">Profile</span></figcaption>
+              </figure>
+              <figure class="onboarding-screen">
+                <div class="device-phone">
+                  <img src="assets/projects/souq-pro/souq_pro_6.jpg" alt="Souq Pro wallet balance">
+                </div>
+                <figcaption><span class="onboarding-step">07</span><span data-i18n="walkthrough_wallet">Wallet</span></figcaption>
+              </figure>
+              <figure class="onboarding-screen">
+                <div class="device-phone">
+                  <img src="assets/projects/souq-pro/souq_pro_7.jpg" alt="Souq Pro payment methods">
+                </div>
+                <figcaption><span class="onboarding-step">08</span><span data-i18n="walkthrough_payment_methods">Payment methods</span></figcaption>
+              </figure>
             </div>
             <div class="project-type-badge" data-i18n="souq_badge">Freelance / Commercial</div>
           </div>
@@ -571,7 +599,7 @@
               </a>
             </div>
           </div>
-        </div
+        </div>
       </div>
     </div>
   </section>
@@ -602,10 +630,10 @@
         </div>
 
         <!-- Timeline Item 2 -->
-<<<<<<< HEAD
         <div class="timeline-item reveal reveal-delay-1">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
+            <img src="assets/experience/hackathon_image.jpg" alt="Master Coding Hackathon in Laghouat" class="timeline-image">
             <span class="timeline-date">2025</span>
             <h4 class="timeline-title" data-i18n="exp2_title">Hackathon Participant</h4>
             <p class="timeline-subtitle" data-i18n="exp2_subtitle">Master coding — Laghouat</p>
@@ -616,36 +644,6 @@
             </p>
           </div>
         </div>
-
-=======
-       <div class="timeline-item reveal reveal-delay-1">
-  <div class="timeline-dot"></div>
-
-  <div class="timeline-content">
-    <img
-      src="hackathon_image.jpg"
-      alt="Master Coding Hackathon in Laghouat"
-      class="timeline-image"
-    />
-
-    <span class="timeline-date">2025</span>
-
-    <h4 class="timeline-title" data-i18n="exp2_title">
-      Hackathon Participant
-    </h4>
-
-    <p class="timeline-subtitle" data-i18n="exp2_subtitle">
-      Master coding — Laghouat
-    </p>
-
-    <p class="timeline-text" data-i18n="exp2_text">
-      Competed in the Master coding hackathon in Laghouat, Algeria.
-      Demonstrated problem-solving abilities and rapid development skills
-      under competitive pressure.
-    </p>
-  </div>
-</div>
->>>>>>> 71c35006d67ed191c5dded02a5155438c3de71b6
         <!-- Timeline Item 3 -->
         <div class="timeline-item reveal reveal-delay-2">
           <div class="timeline-dot"></div>
@@ -833,11 +831,7 @@
           </div>
 
           <div style="margin-top:24px;">
-<<<<<<< HEAD
             <a href="https://drive.google.com/file/d/1dSGQ4o7MV7TU4ML2aHGphB_OUUbG1gb_/view?usp=sharing" id="downloadCV" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-=======
-            <a href="https://drive.google.com/file/d/15tXo8rcYtij3awW6u7ren8ZkQpHF3Hs4/view?usp=sharing" id="downloadCV" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
->>>>>>> 71c35006d67ed191c5dded02a5155438c3de71b6
               <i class="fas fa-download"></i> <span data-i18n="contact_download_cv">Download CV</span>
             </a>
           </div>
