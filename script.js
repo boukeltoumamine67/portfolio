@@ -355,7 +355,6 @@ document.addEventListener('DOMContentLoaded', () => {
       hero_description: "Je crée des applications mobiles multiplateformes performantes et élégantes avec Flutter & Dart. Passionné par l'architecture propre, les interfaces réactives et le développement de produits SaaS commerciaux.",
       hero_cta_work: "Voir Mes Projets",
       hero_cta_contact: "Me Contacter",
-      scroll_down: "Défiler vers le bas",
 
       // Stats
       stat_projects: "Projets Réalisés",

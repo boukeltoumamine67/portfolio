@@ -603,15 +603,16 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* Hero Image */
 .hero-visual {
-  flex: 0 0 380px;
+  flex: 0 1 380px;
+  min-width: 0;
   position: relative;
   animation: fadeInRight 1s ease 0.4s forwards;
   opacity: 0;
 }
 .hero-image-wrapper {
   position: relative;
-  width: 340px;
-  height: 340px;
+  width: min(100%, clamp(220px, 30vw, 340px));
+  aspect-ratio: 1;
   margin: 0 auto;
 }
 .hero-image-ring {
@@ -636,16 +637,18 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   to { transform: rotate(360deg); }
 }
 .hero-image {
-  width: 340px;
-  height: 340px;
+  width: 100%;
+  height: 100%;
+  display: block;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent);
   box-shadow: 0 0 40px var(--accent-glow);
 }
 .hero-image-placeholder {
-  width: 340px;
-  height: 340px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
   border-radius: 50%;
   background: var(--gradient-card);
   border: 3px solid var(--accent);
@@ -701,47 +704,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 @keyframes techFloat {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
-}
-
-/* Scroll Indicator */
-.scroll-indicator {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  color: var(--text-tertiary);
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  animation: fadeInUp 0.8s ease 0.8s forwards;
-  opacity: 0;
-}
-.scroll-indicator .mouse {
-  width: 24px;
-  height: 38px;
-  border: 2px solid var(--text-tertiary);
-  border-radius: 12px;
-  position: relative;
-}
-.scroll-indicator .mouse::after {
-  content: '';
-  position: absolute;
-  top: 6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 3px;
-  height: 8px;
-  background: var(--accent);
-  border-radius: 3px;
-  animation: scrollWheel 2s ease infinite;
-}
-@keyframes scrollWheel {
-  0% { transform: translateX(-50%) translateY(0); opacity: 1; }
-  100% { transform: translateX(-50%) translateY(12px); opacity: 0; }
 }
 
 /* ============================================
@@ -1835,13 +1797,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   }
 
   .hero-image-wrapper {
-    width: 260px;
-    height: 260px;
-  }
-  .hero-image,
-  .hero-image-placeholder {
-    width: 260px;
-    height: 260px;
+    width: min(100%, 72vw, 280px);
   }
 
   .about-highlights {
