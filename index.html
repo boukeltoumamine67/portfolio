@@ -14,13 +14,13 @@
   <meta property="og:type" content="website">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%2300f5ff'/><text x='50' y='63' text-anchor='middle' font-family='Arial,sans-serif' font-size='46' font-weight='700' fill='%230a0a0f'>BA</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23047857'/><text x='50' y='63' text-anchor='middle' font-family='Arial,sans-serif' font-size='46' font-weight='700' fill='%23ffffff'>BA</text></svg>">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
 
@@ -88,7 +88,7 @@
           I craft beautiful, high-performance cross-platform mobile applications using Flutter & Dart.
           Passionate about clean architecture, responsive UI, and building commercial-grade SaaS products.
         </p>
-        <!--test test-->
+
         <div class="hero-cta">
           <a href="#projects" class="btn btn-primary">
             <i class="fas fa-rocket"></i> <span data-i18n="hero_cta_work">View My Work</span>
@@ -114,7 +114,7 @@
         </div>
       </div>
 
-      <div class="hero-visual">
+      <!-- <div class="hero-visual">
         <div class="hero-image-wrapper">
           <div class="hero-image-ring"></div>
           <div class="hero-image-ring-2"></div>
@@ -126,13 +126,7 @@
           <div class="hero-tech-badge"><i class="fas fa-layer-group"></i> Clean Arch</div>
         </div>
       </div>
-    </div>
-
-    <style>
-      @keyframes blink {
-        50% { opacity: 0; }
-      }
-    </style>
+    </div> -->
   </section>
 
   <!-- ======== STATS SECTION ======== -->
@@ -171,7 +165,7 @@
       <div class="about-grid">
         <div class="about-image-container reveal">
           <div class="about-image-card">
-            <img src="assets/profile/profile.jpg" alt="Boukeltoum Amine">
+            <img src="assets/profile/profile picture2.png" alt="Boukeltoum Amine">
           </div>
           <div class="about-floating-card">
             <div class="stat-number">2+</div>
@@ -419,49 +413,49 @@
       </div>
 
       <div class="project-showcase">
+
         <!-- DEM AI Project -->
         <div class="project-card reveal">
           <div class="project-preview" id="projectScreenshots">
-            <p class="onboarding-hint"><i class="fas fa-arrows-left-right" aria-hidden="true"></i> <span data-i18n="screenshots_swipe_hint">Swipe or scroll to explore screens</span></p>
-            <div class="device-mockups" role="region" aria-label="DEM AI app screens" tabindex="0">
-              <figure class="onboarding-screen">
-                <div class="device-phone">
-                  <img src="assets/projects/dem-ai/login.jpg" alt="DEM AI patient login screen">
-                </div>
-                <figcaption><span class="onboarding-step">01</span><span data-i18n="walkthrough_sign_in">Sign in</span></figcaption>
-              </figure>
-              <figure class="onboarding-screen">
-                <div class="device-phone">
-                  <img src="assets/projects/dem-ai/medical_history.jpg" alt="DEM AI medical history and prescriptions">
-                </div>
-                <figcaption><span class="onboarding-step">02</span><span data-i18n="walkthrough_medical_history">Medical history</span></figcaption>
-              </figure>
-              <figure class="onboarding-screen">
-                <div class="device-phone">
-                  <img src="assets/projects/dem-ai/ai_analysis.jpg" alt="DEM AI medication analysis">
-                </div>
-                <figcaption><span class="onboarding-step">03</span><span data-i18n="walkthrough_ai_analysis">AI analysis</span></figcaption>
-              </figure>
-              <figure class="onboarding-screen">
-                <div class="device-phone">
-                  <img src="assets/projects/dem-ai/maps.jpg" alt="DEM AI nearby pharmacy map">
-                </div>
-                <figcaption><span class="onboarding-step">04</span><span data-i18n="walkthrough_pharmacy_map">Pharmacy map</span></figcaption>
-              </figure>
-              <figure class="onboarding-screen">
-                <div class="device-phone">
-                  <img src="assets/projects/dem-ai/add_appointment.jpg" alt="DEM AI appointment booking form">
-                </div>
-                <figcaption><span class="onboarding-step">05</span><span data-i18n="walkthrough_book_appointment">Book an appointment</span></figcaption>
-              </figure>
-              <figure class="onboarding-screen">
-                <div class="device-phone">
-                  <img src="assets/projects/dem-ai/appointments.jpg" alt="DEM AI appointment list and statuses">
-                </div>
-                <figcaption><span class="onboarding-step">06</span><span data-i18n="walkthrough_appointments">Appointments</span></figcaption>
-              </figure>
-            </div>
             <div class="project-type-badge" data-i18n="demai_badge">University Project</div>
+
+            <div class="walk" tabindex="0" aria-label="DEM AI app screens">
+              <div class="walk-steps">
+                <button class="walk-step is-active" type="button" data-src="assets/projects/dem-ai/login.jpg" data-alt="DEM AI patient login screen">
+                  <span class="walk-step-num">01</span><span data-i18n="walkthrough_sign_in">Sign in</span>
+                </button>
+                <button class="walk-step" type="button" data-src="assets/projects/dem-ai/medical_history.jpg" data-alt="DEM AI medical history and prescriptions">
+                  <span class="walk-step-num">02</span><span data-i18n="walkthrough_medical_history">Medical history</span>
+                </button>
+                <button class="walk-step" type="button" data-src="assets/projects/dem-ai/ai_analysis.jpg" data-alt="DEM AI medication analysis">
+                  <span class="walk-step-num">03</span><span data-i18n="walkthrough_ai_analysis">AI analysis</span>
+                </button>
+                <button class="walk-step" type="button" data-src="assets/projects/dem-ai/maps.jpg" data-alt="DEM AI nearby pharmacy map">
+                  <span class="walk-step-num">04</span><span data-i18n="walkthrough_pharmacy_map">Pharmacy map</span>
+                </button>
+                <button class="walk-step" type="button" data-src="assets/projects/dem-ai/add_appointment.jpg" data-alt="DEM AI appointment booking form">
+                  <span class="walk-step-num">05</span><span data-i18n="walkthrough_book_appointment">Book an appointment</span>
+                </button>
+                <button class="walk-step" type="button" data-src="assets/projects/dem-ai/appointments.jpg" data-alt="DEM AI appointment list and statuses">
+                  <span class="walk-step-num">06</span><span data-i18n="walkthrough_appointments">Appointments</span>
+                </button>
+              </div>
+
+              <div class="walk-stage">
+                <div class="walk-phone">
+                  <img class="walk-img" src="assets/projects/dem-ai/login.jpg" alt="DEM AI patient login screen">
+                </div>
+                <div class="walk-controls">
+                  <button class="walk-btn walk-prev" type="button" aria-label="Previous screen">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <span class="walk-counter">01 / 06</span>
+                  <button class="walk-btn walk-next" type="button" aria-label="Next screen">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="project-info">
@@ -509,58 +503,51 @@
         <!-- Souq Pro Project -->
         <div class="project-card reveal">
           <div class="project-preview" id="projectScreenshotsSouq">
-            <p class="onboarding-hint"><i class="fas fa-arrows-left-right" aria-hidden="true"></i> <span data-i18n="screenshots_swipe_hint">Swipe or scroll to explore screens</span></p>
-            <div class="device-mockups" role="region" aria-label="Souq Pro app screens" tabindex="0">
-              <figure class="onboarding-screen">
-                <div class="device-phone">
-                  <img src="assets/projects/souq-pro/souq_pro_1.jpg" alt="Souq Pro sign-in screen">
-                </div>
-                <figcaption><span class="onboarding-step">01</span><span data-i18n="walkthrough_sign_in">Sign in</span></figcaption>
-              </figure>
-              <figure class="onboarding-screen">
-                <div class="device-phone">
-                  <img src="assets/projects/souq-pro/souq_pro_5.jpg" alt="Souq Pro home and service categories">
-                </div>
-                <figcaption><span class="onboarding-step">02</span><span data-i18n="walkthrough_home">Home</span></figcaption>
-              </figure>
-              <figure class="onboarding-screen">
-                <div class="device-phone">
-                  <img src="assets/projects/souq-pro/souq_pro_8.jpg" alt="Souq Pro available service demands">
-                </div>
-                <figcaption><span class="onboarding-step">03</span><span data-i18n="walkthrough_job_feed">Job feed</span></figcaption>
-              </figure>
-              <figure class="onboarding-screen">
-                <div class="device-phone">
-                  <img src="assets/projects/souq-pro/souq_pro_3.jpg" alt="Souq Pro service demand details">
-                </div>
-                <figcaption><span class="onboarding-step">04</span><span data-i18n="walkthrough_demand_details">Demand details</span></figcaption>
-              </figure>
-              <figure class="onboarding-screen">
-                <div class="device-phone">
-                  <img src="assets/projects/souq-pro/souq_pro_2.jpg" alt="Souq Pro submit an offer form">
-                </div>
-                <figcaption><span class="onboarding-step">05</span><span data-i18n="walkthrough_submit_offer">Submit an offer</span></figcaption>
-              </figure>
-              <figure class="onboarding-screen">
-                <div class="device-phone">
-                  <img src="assets/projects/souq-pro/souq_pro_4.jpg" alt="Souq Pro professional profile">
-                </div>
-                <figcaption><span class="onboarding-step">06</span><span data-i18n="walkthrough_profile">Profile</span></figcaption>
-              </figure>
-              <figure class="onboarding-screen">
-                <div class="device-phone">
-                  <img src="assets/projects/souq-pro/souq_pro_6.jpg" alt="Souq Pro wallet balance">
-                </div>
-                <figcaption><span class="onboarding-step">07</span><span data-i18n="walkthrough_wallet">Wallet</span></figcaption>
-              </figure>
-              <figure class="onboarding-screen">
-                <div class="device-phone">
-                  <img src="assets/projects/souq-pro/souq_pro_7.jpg" alt="Souq Pro payment methods">
-                </div>
-                <figcaption><span class="onboarding-step">08</span><span data-i18n="walkthrough_payment_methods">Payment methods</span></figcaption>
-              </figure>
-            </div>
             <div class="project-type-badge" data-i18n="souq_badge">Freelance / Commercial</div>
+
+            <div class="walk" tabindex="0" aria-label="Souq Pro app screens">
+              <div class="walk-steps">
+                <button class="walk-step is-active" type="button" data-src="assets/projects/souq-pro/souq_pro_1.jpg" data-alt="Souq Pro sign-in screen">
+                  <span class="walk-step-num">01</span><span data-i18n="walkthrough_sign_in">Sign in</span>
+                </button>
+                <button class="walk-step" type="button" data-src="assets/projects/souq-pro/souq_pro_5.jpg" data-alt="Souq Pro home and service categories">
+                  <span class="walk-step-num">02</span><span data-i18n="walkthrough_home">Home</span>
+                </button>
+                <button class="walk-step" type="button" data-src="assets/projects/souq-pro/souq_pro_8.jpg" data-alt="Souq Pro available service demands">
+                  <span class="walk-step-num">03</span><span data-i18n="walkthrough_job_feed">Job feed</span>
+                </button>
+                <button class="walk-step" type="button" data-src="assets/projects/souq-pro/souq_pro_3.jpg" data-alt="Souq Pro service demand details">
+                  <span class="walk-step-num">04</span><span data-i18n="walkthrough_demand_details">Demand details</span>
+                </button>
+                <button class="walk-step" type="button" data-src="assets/projects/souq-pro/souq_pro_2.jpg" data-alt="Souq Pro submit an offer form">
+                  <span class="walk-step-num">05</span><span data-i18n="walkthrough_submit_offer">Submit an offer</span>
+                </button>
+                <button class="walk-step" type="button" data-src="assets/projects/souq-pro/souq_pro_4.jpg" data-alt="Souq Pro professional profile">
+                  <span class="walk-step-num">06</span><span data-i18n="walkthrough_profile">Profile</span>
+                </button>
+                <button class="walk-step" type="button" data-src="assets/projects/souq-pro/souq_pro_6.jpg" data-alt="Souq Pro wallet balance">
+                  <span class="walk-step-num">07</span><span data-i18n="walkthrough_wallet">Wallet</span>
+                </button>
+                <button class="walk-step" type="button" data-src="assets/projects/souq-pro/souq_pro_7.jpg" data-alt="Souq Pro payment methods">
+                  <span class="walk-step-num">08</span><span data-i18n="walkthrough_payment_methods">Payment methods</span>
+                </button>
+              </div>
+
+              <div class="walk-stage">
+                <div class="walk-phone">
+                  <img class="walk-img" src="assets/projects/souq-pro/souq_pro_1.jpg" alt="Souq Pro sign-in screen">
+                </div>
+                <div class="walk-controls">
+                  <button class="walk-btn walk-prev" type="button" aria-label="Previous screen">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <span class="walk-counter">01 / 08</span>
+                  <button class="walk-btn walk-next" type="button" aria-label="Next screen">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="project-info">
@@ -595,6 +582,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -639,6 +627,7 @@
             </p>
           </div>
         </div>
+
         <!-- Timeline Item 3 -->
         <div class="timeline-item reveal reveal-delay-2">
           <div class="timeline-dot"></div>
@@ -896,6 +885,6 @@
   </button>
 
   <!-- Script -->
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>

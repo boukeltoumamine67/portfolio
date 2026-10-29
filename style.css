@@ -1,6 +1,6 @@
 /* ============================================
    PORTFOLIO - BOUKELTOUM AMINE
-   Light Theme (MVP) - Redesign
+   Light Theme (MVP)
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
@@ -48,6 +48,9 @@
   /* Layout */
   --container: 1160px;
   --section-y: 96px;
+
+  /* Hero background image (change the path in ONE place) */
+  --hero-bg-image: url('assets/profile/background_image.png');
 
   /* Motion */
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
@@ -329,7 +332,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ============================================
-   HERO
+   HERO (background image, photo left, text right)
    ============================================ */
 .hero {
   min-height: 100vh;
@@ -337,14 +340,16 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   align-items: center;
   position: relative;
   padding: 140px 0 96px;
+  /* Darkest on the right, where the text sits */
   background:
-    radial-gradient(circle at 85% 20%, var(--accent-soft), transparent 45%),
-    var(--bg);
+    linear-gradient(270deg, rgba(2, 44, 34, 0.92) 0%, rgba(2, 44, 34, 0.78) 45%, rgba(2, 44, 34, 0.5) 100%),
+    var(--hero-bg-image) center / cover no-repeat,
+    #0f172a;
 }
-.hero-orb { display: none; }
 
 .hero .container {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
   gap: 64px;
@@ -362,12 +367,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   align-items: center;
   gap: 8px;
   padding: 6px 14px;
-  background: var(--accent-soft);
-  border: 1px solid var(--accent-ring);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 50px;
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--accent-hover);
+  color: #d1fae5;
   margin-bottom: 24px;
   animation: fadeInUp 0.7s ease forwards;
   opacity: 0;
@@ -375,14 +380,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero-badge .pulse-dot {
   width: 7px;
   height: 7px;
-  background: var(--accent);
+  background: #6ee7b7;
   border-radius: 50%;
 }
 
 .hero-greeting {
   font-family: var(--font-mono);
   font-size: 0.95rem;
-  color: var(--text-2);
+  color: #a7f3d0;
   margin-bottom: 8px;
   animation: fadeInUp 0.7s ease 0.1s forwards;
   opacity: 0;
@@ -394,29 +399,33 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 800;
   line-height: 1.05;
   letter-spacing: -1px;
-  color: var(--text);
+  color: #ffffff;
   margin-bottom: 12px;
   animation: fadeInUp 0.7s ease 0.2s forwards;
   opacity: 0;
 }
 .hero-name .highlight {
-  color: var(--accent);
+  color: #6ee7b7;
 }
 
 .hero-title {
   font-family: var(--font-heading);
   font-size: clamp(1.2rem, 2.2vw, 1.6rem);
   font-weight: 600;
-  color: var(--text-2);
+  color: #e2e8f0;
   margin-bottom: 20px;
   min-height: 1.6em;
   animation: fadeInUp 0.7s ease 0.3s forwards;
   opacity: 0;
 }
+/* Typing cursor (inline style in the HTML) */
+.hero-title [style] {
+  color: #6ee7b7 !important;
+}
 
 .hero-description {
   font-size: 1.05rem;
-  color: var(--text-2);
+  color: #cbd5e1;
   line-height: 1.75;
   margin-bottom: 36px;
   max-width: 540px;
@@ -431,6 +440,23 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   flex-wrap: wrap;
   animation: fadeInUp 0.7s ease 0.5s forwards;
   opacity: 0;
+}
+.hero .btn-primary {
+  background: #ffffff;
+  color: #065f46;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+.hero .btn-primary:hover {
+  background: #ecfdf5;
+}
+.hero .btn-outline {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+}
+.hero .btn-outline:hover {
+  border-color: #6ee7b7;
+  color: #6ee7b7;
 }
 
 .hero-socials {
@@ -447,24 +473,24 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-sm);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  color: var(--text-2);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
   font-size: 1.05rem;
   transition: color var(--t-fast), border-color var(--t-fast), transform var(--t-fast);
 }
 .hero-socials a:hover {
-  color: var(--accent);
-  border-color: var(--accent);
+  color: #6ee7b7;
+  border-color: #6ee7b7;
   transform: translateY(-2px);
 }
 
-/* Hero image */
+/* Hero photo */
 .hero-visual {
   flex: 0 1 380px;
   min-width: 0;
   position: relative;
-  animation: fadeInRight 0.9s ease 0.3s forwards;
+  animation: fadeInLeft 0.9s ease 0.3s forwards;
   opacity: 0;
 }
 .hero-image-wrapper {
@@ -531,9 +557,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   line-height: 1.1;
   margin-bottom: 6px;
 }
-.stat-value::after {
-  color: var(--accent);
-}
 .stat-label {
   font-size: 0.9rem;
   color: var(--text-2);
@@ -596,8 +619,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-@keyframes fadeInRight {
-  from { opacity: 0; transform: translateX(30px); }
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
   to { opacity: 1; transform: translateX(0); }
 }
 @keyframes blink {
@@ -605,7 +628,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ============================================
-   ABOUT
+   ABOUT (photo left, text right)
    ============================================ */
 .about {
   background: var(--bg-soft);
@@ -631,19 +654,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-}
-.about-image-placeholder {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  background: var(--surface-2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.about-image-placeholder i {
-  font-size: 5rem;
-  color: var(--accent);
-  opacity: 0.25;
 }
 .about-floating-card {
   position: absolute;
@@ -860,12 +870,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .project-preview {
   position: relative;
   min-width: 0;
-  min-height: 460px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  padding: 48px 0 16px;
+  padding: 28px;
   background: var(--bg-soft);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
@@ -883,118 +892,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   100% { box-shadow: none; }
 }
 
-.onboarding-hint {
-  position: absolute;
-  top: 16px;
-  left: 20px;
-  z-index: 2;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.76rem;
-  font-weight: 600;
-  color: var(--text-2);
-}
-.onboarding-hint i {
-  color: var(--accent);
-}
-
-.device-mockups {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  flex: 1;
-  align-self: stretch;
-  width: 100%;
-  min-width: 0;
-  min-height: 330px;
-  padding: 12px 20px 22px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  overscroll-behavior-x: contain;
-  scroll-padding-inline: 20px;
-  scroll-snap-type: x mandatory;
-  scrollbar-color: var(--border-strong) transparent;
-  scrollbar-width: thin;
-}
-.device-mockups:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: -2px;
-}
-
-.onboarding-screen {
-  display: flex;
-  flex: 0 0 clamp(150px, 19vw, 180px);
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  margin: 0;
-  scroll-snap-align: center;
-}
-.device-phone {
-  position: relative;
-  width: clamp(130px, 15vw, 166px);
-  aspect-ratio: 9 / 18.5;
-  flex: 0 0 auto;
-  border-radius: 26px;
-  border: 7px solid var(--text);
-  background: var(--text);
-  box-shadow: var(--shadow-md);
-  overflow: hidden;
-}
-.device-phone::before {
-  content: '';
-  position: absolute;
-  top: 6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 44px;
-  height: 12px;
-  border-radius: 6px;
-  background: var(--text);
-  z-index: 10;
-}
-.device-phone img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background: #ffffff;
-}
-.onboarding-screen figcaption {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--text-2);
-  white-space: nowrap;
-}
-.onboarding-step {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--accent);
-  font-variant-numeric: tabular-nums;
-}
-
-.project-preview-placeholder {
-  width: 100%;
-  min-height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--surface-2);
-}
-.project-preview-placeholder i {
-  font-size: 3.5rem;
-  color: var(--accent);
-  opacity: 0.3;
-}
-
 .project-type-badge {
   position: static;
   align-self: flex-start;
-  margin: 0 20px;
+  margin: 0 0 20px;
   padding: 5px 12px;
   background: var(--accent-soft);
   border: 1px solid var(--accent-ring);
@@ -1071,6 +972,153 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ============================================
+   PROJECT SCREENSHOTS - step-by-step viewer
+   (used by DEM AI and Souq Pro)
+   ============================================ */
+.walk {
+  display: grid;
+  grid-template-columns: minmax(180px, 220px) 1fr;
+  gap: 28px;
+  align-items: center;
+  outline: none;
+}
+.walk:focus-visible {
+  box-shadow: 0 0 0 4px var(--accent-ring);
+  border-radius: var(--radius-sm);
+}
+
+/* Step list */
+.walk-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.walk-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-2);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  transition: background var(--t-fast), color var(--t-fast), border-color var(--t-fast);
+}
+.walk-step:hover {
+  background: var(--surface);
+  color: var(--text);
+}
+.walk-step.is-active {
+  background: var(--surface);
+  border-color: var(--border);
+  box-shadow: var(--shadow-sm);
+  color: var(--text);
+  font-weight: 600;
+}
+.walk-step-num {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--text-2);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+.walk-step.is-active .walk-step-num {
+  background: var(--accent);
+  color: #ffffff;
+}
+.walk-step:focus-visible,
+.walk-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Stage */
+.walk-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.walk-phone {
+  position: relative;
+  width: clamp(200px, 22vw, 240px);
+  aspect-ratio: 9 / 19;
+  border-radius: 34px;
+  border: 8px solid #1e293b;
+  background: #ffffff;
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.18);
+  overflow: hidden;
+}
+.walk-phone::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 52px;
+  height: 6px;
+  border-radius: 4px;
+  background: #334155;
+  z-index: 2;
+}
+.walk-phone img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.walk-phone img.is-changing {
+  animation: walkFade 0.35s ease;
+}
+@keyframes walkFade {
+  from { opacity: 0.3; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.walk-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.walk-btn {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  font-size: 0.85rem;
+  transition: background var(--t-fast), color var(--t-fast), border-color var(--t-fast);
+}
+.walk-btn:hover:not(:disabled) {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+.walk-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.walk-counter {
+  min-width: 70px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-2);
+}
+
+/* ============================================
    EXPERIENCE (Timeline)
    ============================================ */
 .timeline {
@@ -1130,6 +1178,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .timeline-content:hover {
   border-color: var(--border-strong);
   box-shadow: var(--shadow-md);
+}
+.timeline-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
 }
 .timeline-date {
   display: inline-block;
@@ -1586,6 +1641,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    RESPONSIVE
    ============================================ */
 @media (max-width: 1024px) {
+  /* Hero stacks: text on top, photo below, lighter vertical overlay */
+  .hero {
+    background:
+      linear-gradient(180deg, rgba(2, 44, 34, 0.55) 0%, rgba(2, 44, 34, 0.7) 100%),
+      var(--hero-bg-image) center / cover no-repeat,
+      #0f172a;
+  }
   .hero .container {
     flex-direction: column;
     text-align: center;
@@ -1595,6 +1657,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   }
   .hero-description {
     margin: 0 auto 36px;
+  }
+  .hero-title,
+  .hero-description {
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
   }
   .hero-cta,
   .hero-socials {
@@ -1688,6 +1754,37 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     grid-template-columns: 1fr;
   }
 
+  /* Project viewer: steps become a horizontal scrollable row */
+  .project-preview {
+    padding: 20px;
+  }
+  .walk {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .walk-steps {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+  .walk-steps::-webkit-scrollbar {
+    display: none;
+  }
+  .walk-step {
+    width: auto;
+    flex-shrink: 0;
+    white-space: nowrap;
+    background: var(--surface);
+    border-color: var(--border);
+  }
+  .walk-step.is-active {
+    border-color: var(--accent);
+  }
+  .walk-phone {
+    width: 210px;
+  }
+
   .timeline::before {
     left: 16px;
   }
@@ -1758,82 +1855,5 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   }
   .project-features {
     grid-template-columns: 1fr;
-  }
-}
-
-
-
-/* ============================================
-   HERO BACKGROUND IMAGE
-   ============================================ */
-.hero {
-  background:
-    linear-gradient(90deg, rgba(2, 44, 34, 0.92) 0%, rgba(2, 44, 34, 0.78) 45%, rgba(2, 44, 34, 0.5) 100%),
-    url('assets/profile/mobile_dev_background.png') center / cover no-repeat,
-    #0f172a;
-}
-
-/* Text colors for the dark background */
-.hero .hero-badge {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.25);
-  color: #d1fae5;
-}
-.hero .hero-greeting {
-  color: #a7f3d0;
-}
-.hero .hero-name {
-  color: #ffffff;
-}
-.hero .hero-name .highlight {
-  color: #6ee7b7;
-}
-.hero .hero-title {
-  color: #e2e8f0;
-}
-.hero .hero-title [style] {
-  color: #6ee7b7 !important;
-}
-.hero .hero-description {
-  color: #cbd5e1;
-}
-
-/* Buttons on the image */
-.hero .btn-primary {
-  background: #ffffff;
-  color: #065f46;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-}
-.hero .btn-primary:hover {
-  background: #ecfdf5;
-}
-.hero .btn-outline {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.35);
-  color: #ffffff;
-}
-.hero .btn-outline:hover {
-  border-color: #6ee7b7;
-  color: #6ee7b7;
-}
-
-/* Social icons on the image */
-.hero .hero-socials a {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.25);
-  color: #ffffff;
-}
-.hero .hero-socials a:hover {
-  color: #6ee7b7;
-  border-color: #6ee7b7;
-}
-
-/* Stronger overlay on phones and tablets, where text sits over the whole image */
-@media (max-width: 1024px) {
-  .hero {
-    background:
-      linear-gradient(180deg, rgba(2, 44, 34, 0.9) 0%, rgba(2, 44, 34, 0.82) 100%),
-      url('assets/hero/hero-bg.jpg') center / cover no-repeat,
-      #0f172a;
   }
 }

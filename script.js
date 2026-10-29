@@ -583,3 +583,119 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+
+// ---- DEM AI Screen Walkthrough ----
+document.addEventListener('DOMContentLoaded', () => {
+  const walk = document.querySelector('#projectScreenshots .walk');
+  if (!walk) return;
+
+  const img = document.getElementById('walkImg');
+  const counter = document.getElementById('walkCounter');
+  const prevBtn = document.getElementById('walkPrev');
+  const nextBtn = document.getElementById('walkNext');
+  const steps = walk.querySelectorAll('.walk-step');
+
+  const screens = [
+    { src: 'assets/projects/dem-ai/login.jpg', alt: 'DEM AI patient login screen' },
+    { src: 'assets/projects/dem-ai/medical_history.jpg', alt: 'DEM AI medical history and prescriptions' },
+    { src: 'assets/projects/dem-ai/ai_analysis.jpg', alt: 'DEM AI medication analysis' },
+    { src: 'assets/projects/dem-ai/maps.jpg', alt: 'DEM AI nearby pharmacy map' },
+    { src: 'assets/projects/dem-ai/add_appointment.jpg', alt: 'DEM AI appointment booking form' },
+    { src: 'assets/projects/dem-ai/appointments.jpg', alt: 'DEM AI appointment list and statuses' }
+  ];
+
+  let current = 0;
+  const pad = n => String(n).padStart(2, '0');
+
+  function show(index) {
+    current = Math.max(0, Math.min(index, screens.length - 1));
+    const screen = screens[current];
+
+    img.src = screen.src;
+    img.alt = screen.alt;
+
+    // Restart the fade animation on every change
+    img.classList.remove('is-changing');
+    void img.offsetWidth;
+    img.classList.add('is-changing');
+
+    counter.textContent = `${pad(current + 1)} / ${pad(screens.length)}`;
+
+    steps.forEach((step, i) => {
+      step.classList.toggle('is-active', i === current);
+      step.setAttribute('aria-current', i === current ? 'step' : 'false');
+    });
+
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current === screens.length - 1;
+  }
+
+  steps.forEach(step => {
+    step.addEventListener('click', () => show(Number(step.dataset.index)));
+  });
+
+  prevBtn.addEventListener('click', () => show(current - 1));
+  nextBtn.addEventListener('click', () => show(current + 1));
+
+  // Arrow keys work when the walkthrough has focus
+  walk.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') show(current + 1);
+    if (e.key === 'ArrowLeft') show(current - 1);
+  });
+
+  show(0);
+});
+
+// ---- Project Screen Walkthroughs (works for every .walk viewer) ----
+document.addEventListener('DOMContentLoaded', () => {
+  const pad = n => String(n).padStart(2, '0');
+
+  document.querySelectorAll('.walk').forEach(walk => {
+    const img = walk.querySelector('.walk-img');
+    const counter = walk.querySelector('.walk-counter');
+    const prevBtn = walk.querySelector('.walk-prev');
+    const nextBtn = walk.querySelector('.walk-next');
+    const steps = walk.querySelectorAll('.walk-step');
+    if (!img || !steps.length) return;
+
+    let current = 0;
+
+    function show(index) {
+      current = Math.max(0, Math.min(index, steps.length - 1));
+      const step = steps[current];
+
+      img.src = step.dataset.src;
+      img.alt = step.dataset.alt || '';
+
+      // Restart the fade animation on every change
+      img.classList.remove('is-changing');
+      void img.offsetWidth;
+      img.classList.add('is-changing');
+
+      counter.textContent = `${pad(current + 1)} / ${pad(steps.length)}`;
+
+      steps.forEach((s, i) => {
+        s.classList.toggle('is-active', i === current);
+        s.setAttribute('aria-current', i === current ? 'step' : 'false');
+      });
+
+      // Keep the active step visible in the mobile scroll row
+      step.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === steps.length - 1;
+    }
+
+    steps.forEach((step, i) => step.addEventListener('click', () => show(i)));
+    prevBtn.addEventListener('click', () => show(current - 1));
+    nextBtn.addEventListener('click', () => show(current + 1));
+
+    walk.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') show(current + 1);
+      if (e.key === 'ArrowLeft') show(current - 1);
+    });
+
+    show(0);
+  });
+});
