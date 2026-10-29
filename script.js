@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ---- Force Light Mode ----
   const html = document.documentElement;
-  html.setAttribute('data-theme', 'light');
+  //html.setAttribute('data-theme', 'light');
 
   // ---- Mobile Navigation ----
   const navMenuBtn = document.querySelector('.nav-menu-btn');
