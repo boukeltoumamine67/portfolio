@@ -399,12 +399,30 @@ document.addEventListener('DOMContentLoaded', () => {
       walkthrough_profile: "Profil",
       walkthrough_wallet: "Portefeuille",
       walkthrough_payment_methods: "Moyens de paiement",
+      walkthrough_parcel_setup: "Configuration de la parcelle",
+      walkthrough_treatment_history: "Historique des traitements",
+      walkthrough_signin_signup: "Connexion / inscription",
+      walkthrough_signup: "Formulaire d'inscription",
+      walkthrough_dashboard: "Tableau de bord",
+      walkthrough_add_treatment: "Ajouter un traitement",
+      walkthrough_mite_history: "Historique des acariens",
+      walkthrough_risk_history: "Historique des risques",
+      walkthrough_campaign_tracking: "Suivi de la campagne",
       demai_badge: "Projet Universitaire",
       demai_subtitle: "Application de Santé avec Intégration Gemini AI",
       demai_description: "Une application de santé numérique moderne qui remplace les ordonnances papier et simplifie les soins aux patients. Elle intègre un <strong>Assistant Gemini AI</strong> qui lit et analyse la liste de médicaments du patient en temps réel, identifiant les erreurs critiques, les dosages incorrects et les combinaisons médicamenteuses dangereuses pour assurer la sécurité du patient.",
       souq_badge: "Freelance / Commercial",
       souq_subtitle: "Application de Place de Marché de Services",
       souq_description: "Une application moderne de place de marché permettant aux utilisateurs de trouver des prestataires de services, publier des demandes et recevoir des offres en temps réel. Comprend un fil d'offres robuste, des écrans de demandes détaillés, une authentification sécurisée et une interface élégante construite avec Flutter.",
+      agririsk_badge: "Agriculture / Application Mobile",
+      agririsk_subtitle: "Application de Suivi du Risque Phytosanitaire",
+      agririsk_description: "Une application mobile qui aide les agrumiculteurs algériens à évaluer les risques phytosanitaires et à agir avant la propagation des infestations. Elle calcule des scores de risque pour <strong>12 insectes et maladies courants</strong>, dont les pucerons, les thrips, les mineuses, le Botrytis et l'Anthracnose, à partir des données météorologiques locales et des informations de chaque parcelle. Les risques, classés comme faibles, modérés ou élevés, déclenchent des alertes utiles.",
+      agririsk_feature_scoring: "Évaluation selon la météo, la culture, le stade de croissance, la pression des ravageurs et les traitements",
+      agririsk_feature_alerts: "Suivi météo en arrière-plan et notifications locales",
+      agririsk_feature_treatments: "Les traitements enregistrés sont intégrés au calcul du risque",
+      agririsk_feature_charts: "Graphiques interactifs de l'historique des risques",
+      agririsk_feature_auth: "Authentification par téléphone et validation de licence",
+      agririsk_feature_localization: "Localisation en arabe (RTL) et en français",
 
       // Experience
       exp_label: "Expérience",
@@ -584,68 +602,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-
-// ---- DEM AI Screen Walkthrough ----
-document.addEventListener('DOMContentLoaded', () => {
-  const walk = document.querySelector('#projectScreenshots .walk');
-  if (!walk) return;
-
-  const img = document.getElementById('walkImg');
-  const counter = document.getElementById('walkCounter');
-  const prevBtn = document.getElementById('walkPrev');
-  const nextBtn = document.getElementById('walkNext');
-  const steps = walk.querySelectorAll('.walk-step');
-
-  const screens = [
-    { src: 'assets/projects/dem-ai/login.jpg', alt: 'DEM AI patient login screen' },
-    { src: 'assets/projects/dem-ai/medical_history.jpg', alt: 'DEM AI medical history and prescriptions' },
-    { src: 'assets/projects/dem-ai/ai_analysis.jpg', alt: 'DEM AI medication analysis' },
-    { src: 'assets/projects/dem-ai/maps.jpg', alt: 'DEM AI nearby pharmacy map' },
-    { src: 'assets/projects/dem-ai/add_appointment.jpg', alt: 'DEM AI appointment booking form' },
-    { src: 'assets/projects/dem-ai/appointments.jpg', alt: 'DEM AI appointment list and statuses' }
-  ];
-
-  let current = 0;
-  const pad = n => String(n).padStart(2, '0');
-
-  function show(index) {
-    current = Math.max(0, Math.min(index, screens.length - 1));
-    const screen = screens[current];
-
-    img.src = screen.src;
-    img.alt = screen.alt;
-
-    // Restart the fade animation on every change
-    img.classList.remove('is-changing');
-    void img.offsetWidth;
-    img.classList.add('is-changing');
-
-    counter.textContent = `${pad(current + 1)} / ${pad(screens.length)}`;
-
-    steps.forEach((step, i) => {
-      step.classList.toggle('is-active', i === current);
-      step.setAttribute('aria-current', i === current ? 'step' : 'false');
-    });
-
-    prevBtn.disabled = current === 0;
-    nextBtn.disabled = current === screens.length - 1;
-  }
-
-  steps.forEach(step => {
-    step.addEventListener('click', () => show(Number(step.dataset.index)));
-  });
-
-  prevBtn.addEventListener('click', () => show(current - 1));
-  nextBtn.addEventListener('click', () => show(current + 1));
-
-  // Arrow keys work when the walkthrough has focus
-  walk.addEventListener('keydown', e => {
-    if (e.key === 'ArrowRight') show(current + 1);
-    if (e.key === 'ArrowLeft') show(current - 1);
-  });
-
-  show(0);
-});
 
 // ---- Project Screen Walkthroughs (works for every .walk viewer) ----
 document.addEventListener('DOMContentLoaded', () => {
