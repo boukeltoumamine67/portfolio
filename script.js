@@ -414,7 +414,7 @@ document.addEventListener('DOMContentLoaded', () => {
       souq_badge: "Freelance / Commercial",
       souq_subtitle: "Application de Place de Marché de Services",
       souq_description: "Une application moderne de place de marché permettant aux utilisateurs de trouver des prestataires de services, publier des demandes et recevoir des offres en temps réel. Comprend un fil d'offres robuste, des écrans de demandes détaillés, une authentification sécurisée et une interface élégante construite avec Flutter.",
-      agririsk_badge: "Agriculture / Application Mobile",
+      agririsk_badge: "Projet Freelance",
       agririsk_subtitle: "Application de Suivi du Risque Phytosanitaire",
       agririsk_description: "Une application mobile qui aide les agrumiculteurs algériens à évaluer les risques phytosanitaires et à agir avant la propagation des infestations. Elle calcule des scores de risque pour <strong>12 insectes et maladies courants</strong>, dont les pucerons, les thrips, les mineuses, le Botrytis et l'Anthracnose, à partir des données météorologiques locales et des informations de chaque parcelle. Les risques, classés comme faibles, modérés ou élevés, déclenchent des alertes utiles.",
       agririsk_feature_scoring: "Évaluation selon la météo, la culture, le stade de croissance, la pression des ravageurs et les traitements",
